@@ -40,7 +40,7 @@ def eye_aspect_ratio(eye):
 	# compute the eye aspect ratio
     ear = (A + B) / (2.0 * C)
  
-	# return the eye aspect ratio
+	
     return ear
 camera = cv2.VideoCapture(0)
 
@@ -61,9 +61,7 @@ while True:
     frame_grey = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     frame_resized = resize(frame_grey, width=120)
 
-# Ask the detector to find the bounding boxes of each face. The 1 in the
-# second argument indicates that we should upsample the image 1 time. This
-# will make everything bigger and allow us to detect more faces.
+
     dets = detector(frame_resized, 1)
     
     if len(dets) > 0:
